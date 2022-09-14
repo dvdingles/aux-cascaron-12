@@ -6,7 +6,7 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Dav(props) {
-  const { nodes, materials } = useGLTF("/3D MOFLY.gltf");
+  const { nodes, materials } = useGLTF("/4D MOFLY.gltf");
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -21,27 +21,9 @@ export function Dav(props) {
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.Cube002.geometry}
-        material={materials["Material.001"]}
-        position={[0.34, -0.51, -0.62]}
-        rotation={[-Math.PI / 2, -Math.PI / 2, 0]}
-        scale={[0, 0, 0.01]}
-      />
-      <mesh
-        castShadow
-        receiveShadow
         geometry={nodes.Cube001.geometry}
         material={materials["Material.001"]}
         position={[0.43, 0.14, -0.58]}
-        rotation={[-Math.PI / 2, -Math.PI / 2, 0]}
-        scale={[0, 0, 0.01]}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Cube003.geometry}
-        material={materials["Material.001"]}
-        position={[0.43, -0.51, -0.58]}
         rotation={[-Math.PI / 2, -Math.PI / 2, 0]}
         scale={[0, 0, 0.01]}
       />
@@ -107,6 +89,24 @@ export function Dav(props) {
       <mesh
         castShadow
         receiveShadow
+        geometry={nodes.Cube002.geometry}
+        material={materials["Material.001"]}
+        position={[0.34, -0.51, -0.62]}
+        rotation={[-Math.PI / 2, -Math.PI / 2, 0]}
+        scale={[0, 0, 0.01]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Cube003.geometry}
+        material={materials["Material.001"]}
+        position={[0.43, -0.51, -0.58]}
+        rotation={[-Math.PI / 2, -Math.PI / 2, 0]}
+        scale={[0, 0, 0.01]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
         geometry={nodes.Plano003.geometry}
         material={materials["Material.002"]}
         position={[0, 0.49, -1.03]}
@@ -139,46 +139,6 @@ export function Dav(props) {
         rotation={[Math.PI / 2, 0, Math.PI]}
         scale={0.15}
       />
-      <group position={[-0.01, -1.07, 0.01]} rotation={[0, 0, Math.PI]}>
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes["TAPA_ARD-geom"].geometry}
-          material={materials.GRAN_BOX_ARD_front}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes["TAPA_ARD-geom_1"].geometry}
-          material={materials.TAPA_ARD_back}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes["TAPA_ARD-geom_2"].geometry}
-          material={materials.TAPA_ARD_edge}
-        />
-      </group>
-      <group position={[0, 0.97, 0.01]} rotation={[0, -Math.PI / 2, 0]}>
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes["TAPA_ARD-geom"].geometry}
-          material={materials.GRAN_BOX_ARD_front}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes["TAPA_ARD-geom_1"].geometry}
-          material={materials.TAPA_ARD_back}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes["TAPA_ARD-geom_2"].geometry}
-          material={materials.TAPA_ARD_edge}
-        />
-      </group>
       <group position={[0, -0.03, 0]}>
         <mesh
           castShadow
@@ -199,8 +159,48 @@ export function Dav(props) {
           material={materials.GRAN_BOX_ARD_edge}
         />
       </group>
+      <group position={[-0.01, -1.07, 0.01]} rotation={[0, 0, Math.PI]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes["TAPA_ARD-geom"].geometry}
+          material={materials["GRAN_BOX_ARD_front.001"]}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes["TAPA_ARD-geom_1"].geometry}
+          material={materials.TAPA_ARD_back}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes["TAPA_ARD-geom_2"].geometry}
+          material={materials.TAPA_ARD_edge}
+        />
+      </group>
+      <group position={[0, 0.97, 0.01]} rotation={[0, -Math.PI / 2, 0]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes["TAPA_ARD-geom"].geometry}
+          material={materials["GRAN_BOX_ARD_front.001"]}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes["TAPA_ARD-geom_1"].geometry}
+          material={materials.TAPA_ARD_back}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes["TAPA_ARD-geom_2"].geometry}
+          material={materials.TAPA_ARD_edge}
+        />
+      </group>
     </group>
   );
 }
 
-useGLTF.preload("/3D MOFLY.gltf");
+useGLTF.preload("/4D MOFLY.gltf");
