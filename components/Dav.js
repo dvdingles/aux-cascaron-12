@@ -6,31 +6,201 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Dav(props) {
-  const { nodes, materials } = useGLTF("/4D ROINTE.gltf");
+  const { nodes, materials } = useGLTF("/3D MOFLY.gltf");
   return (
     <group {...props} dispose={null}>
-      <group rotation={[0, 0, Math.PI / 2]}>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Cube.geometry}
+        material={materials["Material.001"]}
+        position={[0.34, 0.14, -0.62]}
+        rotation={[-Math.PI / 2, -Math.PI / 2, 0]}
+        scale={[0, 0, 0.01]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Cube002.geometry}
+        material={materials["Material.001"]}
+        position={[0.34, -0.51, -0.62]}
+        rotation={[-Math.PI / 2, -Math.PI / 2, 0]}
+        scale={[0, 0, 0.01]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Cube001.geometry}
+        material={materials["Material.001"]}
+        position={[0.43, 0.14, -0.58]}
+        rotation={[-Math.PI / 2, -Math.PI / 2, 0]}
+        scale={[0, 0, 0.01]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Cube003.geometry}
+        material={materials["Material.001"]}
+        position={[0.43, -0.51, -0.58]}
+        rotation={[-Math.PI / 2, -Math.PI / 2, 0]}
+        scale={[0, 0, 0.01]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plano.geometry}
+        material={materials["Material.002"]}
+        position={[0, -1.18, -1.03]}
+        scale={0.41}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plano001.geometry}
+        material={materials["Material.002"]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plano002.geometry}
+        material={materials["Material.002"]}
+        position={[1.04, -0.55, 0.64]}
+        rotation={[-Math.PI / 2, -Math.PI / 2, 0]}
+        scale={0.41}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Texto.geometry}
+        material={materials["Material.002"]}
+        position={[0.16, -1.18, -0.93]}
+        rotation={[Math.PI, 0, Math.PI]}
+        scale={0.15}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Texto001.geometry}
+        material={materials["Material.002"]}
+        position={[0.96, -1.18, 0.13]}
+        rotation={[0, Math.PI / 2, 0]}
+        scale={0.15}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Texto002.geometry}
+        material={materials["Material.002"]}
+        position={[1.13, -0.74, 0.63]}
+        rotation={[Math.PI / 2, 0, -Math.PI]}
+        scale={0.15}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Texto003.geometry}
+        material={materials["Material.002"]}
+        position={[1.15, -1.18, 0.13]}
+        rotation={[0, Math.PI / 2, 0]}
+        scale={0.15}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plano003.geometry}
+        material={materials["Material.002"]}
+        position={[0, 0.49, -1.03]}
+        scale={0.41}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Texto004.geometry}
+        material={materials["Material.002"]}
+        position={[0.16, 0.68, -0.93]}
+        rotation={[Math.PI / 2, 0, Math.PI]}
+        scale={0.15}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plano004.geometry}
+        material={materials["Material.002"]}
+        position={[0.3, -0.53, -1.03]}
+        rotation={[0, 0, -Math.PI / 2]}
+        scale={0.41}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Texto005.geometry}
+        material={materials["Material.002"]}
+        position={[0.5, -0.23, -0.93]}
+        rotation={[Math.PI / 2, 0, Math.PI]}
+        scale={0.15}
+      />
+      <group position={[-0.01, -1.07, 0.01]} rotation={[0, 0, Math.PI]}>
         <mesh
           castShadow
           receiveShadow
-          geometry={nodes["TQ2_ARD-geom"].geometry}
-          material={materials.TQ2_ARD_front}
+          geometry={nodes["TAPA_ARD-geom"].geometry}
+          material={materials.GRAN_BOX_ARD_front}
         />
         <mesh
           castShadow
           receiveShadow
-          geometry={nodes["TQ2_ARD-geom_1"].geometry}
-          material={materials.TQ2_ARD_back}
+          geometry={nodes["TAPA_ARD-geom_1"].geometry}
+          material={materials.TAPA_ARD_back}
         />
         <mesh
           castShadow
           receiveShadow
-          geometry={nodes["TQ2_ARD-geom_2"].geometry}
-          material={materials.TQ2_ARD_edge}
+          geometry={nodes["TAPA_ARD-geom_2"].geometry}
+          material={materials.TAPA_ARD_edge}
+        />
+      </group>
+      <group position={[0, 0.97, 0.01]} rotation={[0, -Math.PI / 2, 0]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes["TAPA_ARD-geom"].geometry}
+          material={materials.GRAN_BOX_ARD_front}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes["TAPA_ARD-geom_1"].geometry}
+          material={materials.TAPA_ARD_back}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes["TAPA_ARD-geom_2"].geometry}
+          material={materials.TAPA_ARD_edge}
+        />
+      </group>
+      <group position={[0, -0.03, 0]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes["GRAN_BOX_ARD-geom001"].geometry}
+          material={materials.GRAN_BOX_ARD_front}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes["GRAN_BOX_ARD-geom001_1"].geometry}
+          material={materials.GRAN_BOX_ARD_back}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes["GRAN_BOX_ARD-geom001_2"].geometry}
+          material={materials.GRAN_BOX_ARD_edge}
         />
       </group>
     </group>
   );
 }
 
-useGLTF.preload("/4D ROINTE.gltf");
+useGLTF.preload("/3D MOFLY.gltf");
